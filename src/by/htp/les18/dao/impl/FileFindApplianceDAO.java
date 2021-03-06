@@ -27,13 +27,14 @@ public class FileFindApplianceDAO implements FindApplianceDAO {
 		try{
 			Stream<String> lines = Files.lines(Path.of(PATH_TO_FILE));
 			List<String> products = lines.filter(o -> parser.parsCategory(o).equals(criteria.getGroupSearchName())).collect(Collectors.toList());
-            for(String product : products){
-                Map<String, String> parameters = parser.parsParameters(product);
-                for(String criterion : nameCriteria){
-                    criteria.get(criterion).toString().equals(parameters.get(criterion));
-                }
-                product = nameCriteria;
-            }
+			products = products.stream().filter(o -> {
+				Map<String, String> params = parser.parsParameters(o);
+				return nameCriteria.stream().allMatch(criterion -> criteria.get(criterion).toString().equals(params.get(criterion)));
+			}).collect(Collectors.toList());
+			for (String product : products) {
+				Map<String, String> params = parser.parsParameters(product);
+				appliances.add(factory.createAppliance(criteria.getGroupSearchName(), params));
+			}
 		}catch (IOException exception){
 			throw new DAOException(exception);
 		}

@@ -25,7 +25,7 @@ public class Kettle extends Appliance{
         this.setPowerConsumption(Float.parseFloat(parameters.get("POWER_CONSUMPTION")));
         this.setWeight(Float.parseFloat(parameters.get("WEIGHT")));
         this.setCapacity(Float.parseFloat(parameters.get("CAPACITY")));
-        this.setHeight(Float.parseFloat(parameters.get("Height")));
+        this.setHeight(Float.parseFloat(parameters.get("HEIGHT")));
         this.setWidth(Float.parseFloat(parameters.get("WIDTH")));
         this.setFilter(parameters.get("FILTER"));
         this.setBodyMaterial(parameters.get("BODY_MATERIAL"));
@@ -104,7 +104,8 @@ public class Kettle extends Appliance{
     @Override
     public String toString() {
         return "Kettle{" +
-                "powerConsumption=" + powerConsumption +
+                "price=" + getPrice() +
+                ", powerConsumption=" + powerConsumption +
                 ", weight=" + weight +
                 ", capacity=" + capacity +
                 ", height=" + height +

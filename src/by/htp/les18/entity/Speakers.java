@@ -75,7 +75,8 @@ public class Speakers extends Appliance{
     @Override
     public String toString() {
         return "Speakers{" +
-                "powerConsumption=" + powerConsumption +
+                "price=" + getPrice() +
+                ", powerConsumption=" + powerConsumption +
                 ", cordLength=" + cordLength +
                 ", numberOfSpeakers=" + numberOfSpeakers +
                 ", frequencyRange='" + frequencyRange + '\'' +

@@ -95,7 +95,8 @@ public class Laptop extends Appliance{
     @Override
     public String toString() {
         return "Laptop{" +
-                "batteryCapacity=" + batteryCapacity +
+                "price=" + getPrice() +
+                ", batteryCapacity=" + batteryCapacity +
                 ", CPU=" + CPU +
                 ", displayInchs=" + displayInches +
                 ", memoryROM=" + memoryROM +

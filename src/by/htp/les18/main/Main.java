@@ -15,7 +15,7 @@ public class Main {
 		response = controller.doAction(request);
 		System.out.println(response);
 
-		request = "findbyparameters _|_ category = Oven _|_ PRICE = 370.5 _|_ CAPACITY = 33";
+		request = "findbyparameters _|_ category = Kettle _|_ PRICE = 50";
 		response = controller.doAction(request);
 		System.out.println(response);
 

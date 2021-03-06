@@ -93,7 +93,8 @@ public class Oven extends Appliance{
     @Override
     public String toString() {
         return "Oven{" +
-                "powerConsumption=" + powerConsumption +
+                "price=" + getPrice() +
+                ", powerConsumption=" + powerConsumption +
                 ", weight=" + weight +
                 ", capacity=" + capacity +
                 ", depth=" + depth +

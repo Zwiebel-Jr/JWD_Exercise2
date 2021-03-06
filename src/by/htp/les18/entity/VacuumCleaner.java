@@ -95,7 +95,8 @@ public class VacuumCleaner extends Appliance{
     @Override
     public String toString() {
         return "VacuumCleaner{" +
-                "powerConsumption=" + powerConsumption +
+                "price=" + getPrice() +
+                ", powerConsumption=" + powerConsumption +
                 ", motorSpeedRegulation=" + motorSpeedRegulation +
                 ", cleaningWidth=" + cleaningWidth +
                 ", filterType='" + filterType + '\'' +

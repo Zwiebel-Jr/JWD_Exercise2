@@ -86,7 +86,8 @@ public class TabletPC extends Appliance{
     @Override
     public String toString() {
         return "TabletPC{" +
-                "color='" + color + '\'' +
+                "price=" + getPrice() +
+                ", color='" + color + '\'' +
                 ", flashMemoryCapacity=" + flashMemoryCapacity +
                 ", batteryCapacity=" + batteryCapacity +
                 ", displayInches=" + displayInches +
